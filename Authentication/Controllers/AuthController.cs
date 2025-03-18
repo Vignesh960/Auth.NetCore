@@ -139,7 +139,8 @@ namespace Authentication.Controllers
 
         [HttpGet]
         [Route("users")]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
+
         public async Task<IActionResult> GetUsers()
         {
             var users = await userManager.Users.ToListAsync();
@@ -147,7 +148,7 @@ namespace Authentication.Controllers
         }
         [HttpGet]
         [Route("GetUserwithRoles")]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
         public async Task<IActionResult> GetUserRoles()
         {
             var users = await userManager.Users.ToListAsync();
@@ -160,7 +161,7 @@ namespace Authentication.Controllers
             return Ok(usersWithRoles);
         }
         [HttpDelete("RemoveAllUsers")]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
         public async Task<IActionResult> RemoveAllUsers()
         {
             var currentUser = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -175,7 +176,29 @@ namespace Authentication.Controllers
                     return BadRequest($"Failed to delete user {user.UserName}: {string.Join(", ", result.Errors.Select(e => e.Description))}");
                 }
             }
+
             return Ok(new ResponseDto { statusCode = StatusCodes.Status200OK, Message = "All users have been removed" });
+        }
+
+        [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,Manager")]
+        [Route("GetuserInfo")]
+        public async Task<IActionResult> GetuserInfo()
+        {
+            var identity = User.Identity as ClaimsIdentity;
+            if (identity == null)
+            {
+                return Unauthorized("User not authenticated");
+            }
+            var claims = identity.Claims.Select(c => new { c.Type, c.Value }).ToList();
+            return Ok(
+                new
+                {
+                    username = identity.FindFirst(ClaimTypes.NameIdentifier)?.Value,
+                    Email = identity.FindFirst(ClaimTypes.Email)?.Value,
+                    Role = identity.FindFirst(ClaimTypes.Role)?.Value,
+                    Claims = claims
+                });
         }
     }
 }
