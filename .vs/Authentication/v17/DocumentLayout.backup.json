@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\.NET\\ASP.NET\\Authentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\dbcontext\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\dbcontext\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\models\\authenticatedresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|d:\\.net\\asp.net\\authentication\\authentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BFA4C674-5F7B-4949-B021-20B07E1E47F7}|Authentication\\Authentication.csproj|solutionrelative:authentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,16 +41,59 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginRequestDto.cs",
-              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\DTOs\\LoginRequestDto.cs",
-              "RelativeDocumentMoniker": "Authentication\\Models\\DTOs\\LoginRequestDto.cs",
-              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\DTOs\\LoginRequestDto.cs",
-              "RelativeToolTip": "Authentication\\Models\\DTOs\\LoginRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\appsettings.json",
+              "RelativeDocumentMoniker": "Authentication\\appsettings.json",
+              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\appsettings.json",
+              "RelativeToolTip": "Authentication\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-19T16:42:11.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Program.cs",
+              "RelativeDocumentMoniker": "Authentication\\Program.cs",
+              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Program.cs",
+              "RelativeToolTip": "Authentication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T12:18:21.183Z"
+              "WhenOpened": "2025-03-21T12:25:32.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Authentication\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Authentication\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwG4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T17:38:21.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthenticatedResponseDto.cs",
+              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\AuthenticatedResponseDto.cs",
+              "RelativeDocumentMoniker": "Authentication\\Models\\AuthenticatedResponseDto.cs",
+              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\AuthenticatedResponseDto.cs",
+              "RelativeToolTip": "Authentication\\Models\\AuthenticatedResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T15:35:42.348Z"
             },
             {
               "$type": "Document",
@@ -70,67 +109,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\appsettings.json",
-              "RelativeDocumentMoniker": "Authentication\\appsettings.json",
-              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\appsettings.json",
-              "RelativeToolTip": "Authentication\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-05T10:50:34.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Program.cs",
-              "RelativeDocumentMoniker": "Authentication\\Program.cs",
-              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Program.cs",
-              "RelativeToolTip": "Authentication\\Program.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAADwv1gAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "LoginRequestDto.cs",
+              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\DTOs\\LoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Authentication\\Models\\DTOs\\LoginRequestDto.cs",
+              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\DTOs\\LoginRequestDto.cs",
+              "RelativeToolTip": "Authentication\\Models\\DTOs\\LoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T17:34:10.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Authentication\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Authentication\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAwIsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T17:38:21.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthenticatedResponseDto.cs",
-              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\AuthenticatedResponseDto.cs",
-              "RelativeDocumentMoniker": "Authentication\\Models\\AuthenticatedResponseDto.cs",
-              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\Models\\AuthenticatedResponseDto.cs",
-              "RelativeToolTip": "Authentication\\Models\\AuthenticatedResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:35:42.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "authDbContext.cs",
-              "DocumentMoniker": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\dbContext\\authDbContext.cs",
-              "RelativeDocumentMoniker": "Authentication\\dbContext\\authDbContext.cs",
-              "ToolTip": "D:\\.NET\\ASP.NET\\Authentication\\Authentication\\dbContext\\authDbContext.cs",
-              "RelativeToolTip": "Authentication\\dbContext\\authDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T17:38:48.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T12:18:21.183Z"
             }
           ]
         }

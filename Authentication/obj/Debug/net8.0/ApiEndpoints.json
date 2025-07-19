@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "Authentication.Controllers.AuthController",
+    "Method": "GetuserInfo",
+    "RelativePath": "api/Auth/GetuserInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Authentication.Controllers.AuthController",
     "Method": "GetUserRoles",
     "RelativePath": "api/Auth/GetUserwithRoles",
     "HttpMethod": "GET",
@@ -76,26 +86,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Authentication.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Authentication.WeatherForecast, Authentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

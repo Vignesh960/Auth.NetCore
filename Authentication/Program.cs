@@ -1,5 +1,8 @@
+using Authentication;
 using Authentication.dbContext;
 using Authentication.Repository;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -26,7 +29,7 @@ builder.Services.AddSwaggerGen(
             In = ParameterLocation.Header,
             Type = SecuritySchemeType.ApiKey,
             Scheme = JwtBearerDefaults.AuthenticationScheme,
-            
+
         });
         options.AddSecurityRequirement(
             new OpenApiSecurityRequirement
@@ -58,6 +61,7 @@ builder.Services.AddScoped<UserManager<ApplicationUser>>();
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 
 
+
 //user roles configurations
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().
     AddRoles<IdentityRole>().AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>("auth").
@@ -73,7 +77,26 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 6;
     options.Password.RequiredUniqueChars = 1;
 });
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddCookie()
+    .AddGoogle(opt =>
+{
+    var clientId = builder.Configuration["Authentication:Google:ClientId"];
+    if (clientId == null)
+    {
+        throw new ArgumentNullException(nameof(clientId));
+    }
+    var clientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+    if (clientSecret == null)
+    {
+        throw new ArgumentNullException(nameof(clientSecret));
+    }
+    opt.ClientId = clientId;
+    opt.ClientSecret = clientSecret;
+    opt.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
+})
+    .AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {

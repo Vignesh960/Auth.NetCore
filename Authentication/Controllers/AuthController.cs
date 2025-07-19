@@ -20,11 +20,13 @@ namespace Authentication.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly ITokenRepository tokenRepository;
+        private readonly RoleManager<IdentityRole> roleManager;
 
-        public AuthController(UserManager<ApplicationUser> userManager, ITokenRepository tokenRepository)
+        public AuthController(UserManager<ApplicationUser> userManager, ITokenRepository tokenRepository, RoleManager<IdentityRole> roleManager)
         {
             this.userManager = userManager;
             this.tokenRepository = tokenRepository;
+            this.roleManager = roleManager;
         }
 
         [HttpPost]
@@ -44,26 +46,59 @@ namespace Authentication.Controllers
                 LastName = registerRequestDto.Lastname,
                 LastLoginTime = null
             };
-            var identityResult = await userManager.CreateAsync(applicationUser, registerRequestDto.Password);
-            if (identityResult.Succeeded)
+            #region old code
+            //var identityResult = await userManager.CreateAsync(applicationUser, registerRequestDto.Password);
+            //if (identityResult.Succeeded)
+            //{
+            //    if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
+            //    {
+            //        identityResult = await userManager.AddToRolesAsync(applicationUser, registerRequestDto.Roles);
+            //        if (identityResult.Succeeded)
+            //        {
+            //            return Ok("User registered successfully! Please login.");
+            //        }
+            //        else
+            //        {
+            //            return BadRequest("User registration succeeded, but assigning roles failed.");
+            //        }
+            //    }
+            //    return Ok("User registered successfully! Please login.");
+            //}
+            //else
+            //{
+            //    return BadRequest("User registration failed: " + string.Join(", ", identityResult.Errors.Select(e => e.Description)));
+            //}
+            #endregion
+            // Check if roles were provided
+            if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
             {
-                if (registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
+                var role = registerRequestDto.Roles[0];
+
+                // Check if the role exists before doing anything else
+                if (!await roleManager.RoleExistsAsync(role))
                 {
-                    identityResult = await userManager.AddToRolesAsync(applicationUser, registerRequestDto.Roles);
-                    if (identityResult.Succeeded)
-                    {
-                        return Ok("User registered successfully! Please login.");
-                    }
-                    else
-                    {
-                        return BadRequest("User registration succeeded, but assigning roles failed.");
-                    }
+                    return BadRequest("Invalid user role. Please ensure valid role: " + role);
                 }
+                var identityResult = await userManager.CreateAsync(applicationUser, registerRequestDto.Password);
+                if (!identityResult.Succeeded)
+                {
+                    return BadRequest("User registration failed: " +
+                        string.Join(", ", identityResult.Errors.Select(e => e.Description)));
+                }
+
+                // Role is valid and user is created — now assign the role
+                var roleResult = await userManager.AddToRoleAsync(applicationUser, role);
+                if (!roleResult.Succeeded)
+                {
+                    return BadRequest("User registered, but assigning role failed: " +
+                        string.Join(", ", roleResult.Errors.Select(e => e.Description)));
+                }
+
                 return Ok("User registered successfully! Please login.");
             }
             else
             {
-                return BadRequest("User registration failed: " + string.Join(", ", identityResult.Errors.Select(e => e.Description)));
+                return BadRequest("No role provided. Please provide a valid user role.");
             }
         }
 
